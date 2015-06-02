@@ -35,6 +35,19 @@
 				'min-height':parseInt( coll_height + exp_height / boxes.length )
 			});
 
+			/* hide the collapse icon, unless the group is marked open, then hide the expander icon */
+			$.each( groups, function(i, group)
+			{
+				if ($(groups[i]).hasClass('open'))
+				{
+					$(groups[i]).find('.expand').hide();
+				}
+				else
+				{
+					$(groups[i]).find('.collapse').hide();
+				}
+			});
+
 		});
 
 		/* accordion control click action */
@@ -44,14 +57,27 @@
 			var target 		= parent_el.find( '.box' );
 			if ( parent_el.hasClass( 'open' ) )
 			{
+				/* if open, collapse it */
 				parent_el.removeClass( 'open' );
+				groups.find('.collapse').hide(); /* hide all the collapse icons before showing the expander for this control / box */
+				parent_el.find( '.collapse' ).hide(); /* hide the collapse icon */
+				parent_el.find( '.expand' ).show(); /* show the expand icon */
 				target.slideUp( speed );
 			}
 			else
 			{
+				/* otherwise, expand it */
 				groups.removeClass( 'open' );
+
+				/* close all boxes and hide collapse icons / show all expand icons - before expanding this control / box */
 				boxes.slideUp( speed );
+				groups.find('.collapse').hide();
+				groups.find( '.expand' ).show();
+
+				/* open this box */
 				parent_el.addClass( 'open' );
+				parent_el.find( '.expand' ).hide(); /* hide the expand icon */
+				parent_el.find( '.collapse' ).show(); /* show the collapse icon */
 				target.slideDown( speed );
 			}
 			e.preventDefault( );
