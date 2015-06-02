@@ -1,0 +1,87 @@
+#my_accordion_2 {
+	min-height:800px;
+}
+
+#my_accordion_2 h3 {
+	margin:0 !important;
+}
+
+#my_accordion_2 h3 a {
+	text-decoration:none;
+	display:block;
+	font-weight:bold;
+	font-size:16px;
+	line-height:40px;
+	color:#003e69 !important;
+	padding-left:60px;
+	/* outline:none !important; */
+	background-image:url(../images/control_accordian_expand.png);
+	background-repeat:no-repeat;
+	background-position:19px 50%;
+	background-color:#e4e4e4;
+}
+
+#my_accordion_2 h3 a:hover {
+	text-decoration:none;
+	color:#003e69 !important;
+}
+
+#my_accordion_2 .group {
+	border:1px solid #9a9a9a;
+	margin:16px 0;
+}
+
+#my_accordion_2 .group .box {
+	border-top:1px solid #9a9a9a;
+}
+
+#my_accordion_2 .group.open h3 a {
+	background-color:#003e69;
+	background-image:url(../images/control_accordian_collapse2.png);
+	background-position:20px 49%;
+	color:#ffffff !important;
+}
+
+#my_accordion_2 .group .box ul {
+	font-style:normal;
+	padding-left:100px;
+	overflow:hidden;
+}
+
+#my_accordion_2 .group .box ul li {
+	float:left;
+	width:50%;
+	margin:0;
+	padding:20px;
+	display:inline-block;
+}
+
+#my_accordion_2 .group .box ul li .field-content {
+	display:table;
+	width:100%;
+	clear:both;
+}
+
+#my_accordion_2 .group .box ul li .field-content .thumb {
+	width:20%;
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+	padding-right:16px;
+	height:72px;
+}
+
+#my_accordion_2 .group .box ul li .field-content .title {
+	width:80%;
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+#my_accordion_2 .group .box ul li .field-content .title a {
+	color:#003e69 !important;
+}
+
+#my_accordion_2 .group .box ul li .library-link-separator{
+	margin:0 2px;
+}
