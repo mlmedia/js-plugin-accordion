@@ -5,8 +5,14 @@
 ( function( $ )
 {
 	/* toggle / accordion events - my custom plugin */
-	$.fn.accordion = function( speed )
+	$.fn.accordion = function( options )
 	{
+		/* set the default options */
+		var settings = $.extend({
+            speed: 300,
+            multiple: false
+        }, options );
+
 		/* set vars */
 		var accordion 		= this;
 		var groups 			= accordion.find( '.group' );
@@ -14,7 +20,6 @@
 		var controls 		= accordion.find( '.control' );
 		var active_controls = controls.find( '.current' );
 		var active_control 	= active_controls.first( ).length > 0 ? active_controls.first( ) : accordion.find( '.control:eq(0)' );
-		var speed = ( ! speed ) ? 300 : speed;
 
 		/**
 		 * slide up all of the toggle targets and open the ones with the parent toggle box set to open - very fast so as to not be visible
@@ -31,9 +36,11 @@
 			/* show the accordion when everything is loaded */
 			accordion.show( )
 			var coll_height = accordion.height( );
+			/*
 			accordion.css({
 				'min-height':parseInt( coll_height + exp_height / boxes.length )
 			});
+			*/
 
 			/* hide the collapse icon, unless the group is marked open, then hide the expander icon */
 			$.each( groups, function(i, group)
@@ -57,28 +64,35 @@
 			var target 		= parent_el.find( '.box' );
 			if ( parent_el.hasClass( 'open' ) )
 			{
+				/* hide all the collapse icons if multiple settings is set to false (only one box open at a time) */
+				if (settings.multiple == false)
+				{
+					groups.find('.collapse').hide();
+				}
+
 				/* if open, collapse it */
 				parent_el.removeClass( 'open' );
-				groups.find('.collapse').hide(); /* hide all the collapse icons before showing the expander for this control / box */
 				parent_el.find( '.collapse' ).hide(); /* hide the collapse icon */
 				parent_el.find( '.expand' ).show(); /* show the expand icon */
-				target.slideUp( speed );
+				target.slideUp( settings.speed );
 			}
-			else
+			else /* otherwise, expand it */
 			{
-				/* otherwise, expand it */
-				groups.removeClass( 'open' );
-
-				/* close all boxes and hide collapse icons / show all expand icons - before expanding this control / box */
-				boxes.slideUp( speed );
-				groups.find('.collapse').hide();
-				groups.find( '.expand' ).show();
+				/* hide all the collapse icons if multiple settings is set to false (only one box open at a time) */
+				if (settings.multiple == false)
+				{
+					/* close all boxes and hide collapse icons / show all expand icons - before expanding this control / box */
+					groups.removeClass( 'open' );
+					boxes.slideUp( settings.speed );
+					groups.find('.collapse').hide();
+					groups.find( '.expand' ).show();
+				}
 
 				/* open this box */
 				parent_el.addClass( 'open' );
 				parent_el.find( '.expand' ).hide(); /* hide the expand icon */
 				parent_el.find( '.collapse' ).show(); /* show the collapse icon */
-				target.slideDown( speed );
+				target.slideDown( settings.speed );
 			}
 			e.preventDefault( );
 		});
