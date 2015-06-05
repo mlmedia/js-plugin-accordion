@@ -12,13 +12,28 @@
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/accordion.js"></script>
+
+	<!-- google code prettify - to display the init code -->
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="whitebox">
 			<h1>Accordion plugin</h1>
 			<h2>Unstyled</h2>
-			<div id="my_accordion_1">
+			<p>Place the following JavaScript snippet anywhere in the document to initialize the plugin:</p>
+<pre class="prettyprint linenums">&lt;script type="text/javascript"&gt;
+/* define $ as jQuery just in case */
+( function( $ )
+{
+	/* doc ready */
+	$( function( )
+	{
+		$( '#my_accordion_1' ).accordion( );
+	});
+})( jQuery );
+&lt;/script&gt;</pre>
+			<div id="my_accordion_1" class="accordion">
                 <div class="group">
 					<a class="control" href="#">Control #1 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
@@ -71,8 +86,22 @@
 		    		});
 		    	})( jQuery );
 		    </script>
+			<hr />
 			<h2>Styled</h2>
-			<div id="my_accordion_2" class="styled_accordion">
+			<p>
+				This accordion was styled with some CSS found here: <a href="http://dev.public/accordion/css/accordion.css">http://dev.public/accordion/css/accordion.css</a>.
+			</p>
+			<p>Use the code below to initialize:</p>
+<pre class="prettyprint linenums">&lt;script type="text/javascript"&gt;
+( function( $ )
+{
+	$( function( )
+	{
+		$( '#my_accordion_2' ).accordion( );
+	});
+})( jQuery );
+&lt;/script&gt;</pre>
+			<div id="my_accordion_2" class="accordion styled_accordion">
                 <div class="group">
 					<a class="control" href="#">Control #1 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
@@ -122,6 +151,78 @@
 						 * However, they are separated to display separate options
 						 */
 		    			$( '#my_accordion_2' ).accordion( );
+		    		});
+		    	})( jQuery );
+		    </script>
+			<hr />
+			<h2>Styled with the capability to open multiple boxes at once</h2>
+			<p>Use the JavaScript below with the "multiple" option set to <b>TRUE</b> to allow multiple boxes to open at the same time.</p>
+<pre class="prettyprint linenums">&lt;script type="text/javascript"&gt;
+( function( $ )
+{
+	$( function( )
+	{
+		$( '#my_accordion_3' ).accordion({
+			multiple:true
+		});
+	});
+})( jQuery );
+&lt;/script&gt;</pre>
+			<p>
+				This accordion was styled with some CSS found here: <a href="http://dev.public/accordion/css/accordion.css">http://dev.public/accordion/css/accordion.css</a>.
+			</p>
+			<div id="my_accordion_3" class="accordion styled_accordion">
+                <div class="group">
+					<a class="control" href="#">Control #1 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
+					<div class="box">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna diam, commodo at diam a, vulputate sagittis magna. Pellentesque a congue metus. Vestibulum varius dictum posuere.
+					</div>
+				</div>
+				<div class="group">
+					<a class="control" href="#">Control #2 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
+					<div class="box">
+						Mauris ac metus id ante varius molestie porttitor non nisi. Vivamus turpis augue, faucibus sed ex nec, cursus eleifend mauris. Vestibulum ut auctor lorem. Etiam ultricies pharetra sapien a sodales. Suspendisse condimentum felis sit amet velit venenatis, sed imperdiet turpis consectetur. Fusce non turpis egestas lorem vulputate aliquam. Curabitur vestibulum tristique eros, non euismod nisl iaculis et. In fermentum leo ac nibh rhoncus euismod. Vestibulum id venenatis erat.
+					</div>
+				</div>
+				<div class="group">
+					<a class="control" href="#">Control #3 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
+					<div class="box">
+						Ut viverra imperdiet sodales. Donec pharetra, ex at viverra placerat, lacus mi scelerisque nisl, non suscipit magna enim sed purus. Sed et erat eleifend, tempus ante a, vulputate ligula. Quisque interdum eros placerat, semper felis eget, cursus lectus. Aenean dapibus nibh eget rutrum aliquam. Suspendisse ultrices justo pharetra interdum pharetra. Maecenas a bibendum lorem. Quisque lobortis viverra blandit. Maecenas venenatis faucibus odio nec efficitur. Maecenas fringilla congue sapien porttitor tincidunt. Ut eget leo sed leo placerat varius in dictum velit.
+					</div>
+				</div>
+				<div class="group">
+					<a class="control" href="#">Control #4 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
+					<div class="box">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna diam, commodo at diam a, vulputate sagittis magna. Pellentesque a congue metus. Vestibulum varius dictum posuere.
+					</div>
+				</div>
+				<div class="group">
+					<a class="control" href="#">Control #5 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
+					<div class="box">
+						Mauris ac metus id ante varius molestie porttitor non nisi. Vivamus turpis augue, faucibus sed ex nec, cursus eleifend mauris. Vestibulum ut auctor lorem. Etiam ultricies pharetra sapien a sodales. Suspendisse condimentum felis sit amet velit venenatis, sed imperdiet turpis consectetur. Fusce non turpis egestas lorem vulputate aliquam. Curabitur vestibulum tristique eros, non euismod nisl iaculis et. In fermentum leo ac nibh rhoncus euismod. Vestibulum id venenatis erat.
+					</div>
+				</div>
+				<div class="group">
+					<a class="control" href="#">Control #6 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
+					<div class="box">
+						Ut viverra imperdiet sodales. Donec pharetra, ex at viverra placerat, lacus mi scelerisque nisl, non suscipit magna enim sed purus. Sed et erat eleifend, tempus ante a, vulputate ligula. Quisque interdum eros placerat, semper felis eget, cursus lectus. Aenean dapibus nibh eget rutrum aliquam. Suspendisse ultrices justo pharetra interdum pharetra. Maecenas a bibendum lorem. Quisque lobortis viverra blandit. Maecenas venenatis faucibus odio nec efficitur. Maecenas fringilla congue sapien porttitor tincidunt. Ut eget leo sed leo placerat varius in dictum velit.
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+		    	/* define $ as jQuery just in case */
+		    	( function( $ )
+		        {
+		    		/* doc ready */
+		    		$( function( )
+		            {
+		    			/**
+						 * init the plugin - note all accordions can be serialized - (e.g.) $('#accordion_1, #accordion_2').accordion()
+						 * However, they are separated to display separate options
+						 */
+		    			$( '#my_accordion_3' ).accordion({
+							multiple:true
+						});
 		    		});
 		    	})( jQuery );
 		    </script>
