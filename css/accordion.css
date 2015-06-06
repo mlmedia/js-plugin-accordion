@@ -1,3 +1,7 @@
+.styled_accordion {
+    border-bottom:1px solid #9a9a9a;
+}
+
 .styled_accordion .control {
 	position:relative;
 	text-decoration:none;
@@ -36,10 +40,21 @@
 
 .styled_accordion .group {
 	border:1px solid #9a9a9a;
+	border-bottom:none;
 }
 
 .styled_accordion .group .box {
 	border-top:1px solid #9a9a9a;
+	padding:0;
+	margin:0;
+}
+
+/**
+ * NOTE: we put the padding within a nested ".inner" div inside the ".box" element
+ * because padding / margin on the animated ".box" element causes
+ * animation choppiness in some browsers
+ */
+.styled_accordion .group .box .inner {
 	padding:1em;
 }
 
