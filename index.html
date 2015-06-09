@@ -20,7 +20,57 @@
 	<div class="container">
 		<div class="whitebox">
 			<h1>Accordion plugin</h1>
+			<p>
+				Below are demos of the accordion plugin found here: <a href="https://github.com/mlmedia/accordion" title="Accordion plugin on GitHub">https://github.com/mlmedia/accordion</a>.  Each section displays a different instance of the plugin determined by the initialization options and CSS.
+			</p>
+			<p>
+				The HTML markup used is the same with the exception of the ID used on the containing parent element.  The top parent element can use any ID or class for initialization.  The parent element contains as many "group" elements as desired.  Each "group" element contains a "control" element and a "box" element.  The "control" element optionally contains an "expand" and "collapse" element to display an icon indicating whether the group is open or closed.
+			</p>
+			<p>
+				An example of the accordion markup is shown below:
+			</p>
+<pre class="prettyprint linenums">&lt;div id="my_accordion_1" class="accordion"&gt;
+	&lt;div class="group"&gt;
+		&lt;a class="control" href="#"&gt;
+			Control #1
+			&lt;span class="expand"&gt;+&lt;/span&gt;
+			&lt;span class="collapse"&gt;-&lt;/span&gt;
+		&lt;/a&gt;
+		&lt;div class="box"&gt;
+			&lt;div class="inner"&gt;
+				Lorem ipsum dolor sit amet [...]
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="group"&gt;
+		&lt;a class="control" href="#"&gt;
+			Control #2
+			&lt;span class="expand"&gt;+&lt;/span&gt;
+			&lt;span class="collapse"&gt;-&lt;/span&gt;
+		&lt;/a&gt;
+		&lt;div class="box"&gt;
+			&lt;div class="inner"&gt;
+				Lorem ipsum dolor sit amet [...]
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="group"&gt;
+		&lt;a class="control" href="#"&gt;
+			Control #3
+			&lt;span class="expand"&gt;+&lt;/span&gt;
+			&lt;span class="collapse"&gt;-&lt;/span&gt;&lt;/a&gt;
+		&lt;div class="box"&gt;
+			&lt;div class="inner"&gt;
+				Lorem ipsum dolor sit amet [...]
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+			<hr />
 			<h2>Unstyled</h2>
+			<h3>CSS</h3>
+			<p>No CSS was used except for the default CSS for the page found here: <a href="http://dev.public/accordion/css/main.css">http://dev.public/accordion/css/main.css</a></p>
+			<h3>JavaScript</h3>
 			<p>Place the following JavaScript snippet anywhere in the document to initialize the plugin:</p>
 <pre class="prettyprint linenums">&lt;script type="text/javascript"&gt;
 /* define $ as jQuery just in case */
@@ -110,6 +160,7 @@
 					<a class="control" href="#">Control #1 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
+							<img src="images/sample_image_1.jpg" class="align_left" alt="Sample image #1" />
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna diam, commodo at diam a, vulputate sagittis magna. Pellentesque a congue metus. Vestibulum varius dictum posuere.
 						</div>
 					</div>
@@ -118,6 +169,7 @@
 					<a class="control" href="#">Control #2 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
+							<img src="images/sample_image_2.jpg" class="align_right" alt="Sample image #2" />
 							Mauris ac metus id ante varius molestie porttitor non nisi. Vivamus turpis augue, faucibus sed ex nec, cursus eleifend mauris. Vestibulum ut auctor lorem. Etiam ultricies pharetra sapien a sodales. Suspendisse condimentum felis sit amet velit venenatis, sed imperdiet turpis consectetur. Fusce non turpis egestas lorem vulputate aliquam. Curabitur vestibulum tristique eros, non euismod nisl iaculis et. In fermentum leo ac nibh rhoncus euismod. Vestibulum id venenatis erat.
 						</div>
 					</div>
@@ -142,6 +194,7 @@
 					<a class="control" href="#">Control #5 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
+							<img src="images/sample_image_3.jpg" class="align_left" alt="Sample image #3" />
 							Mauris ac metus id ante varius molestie porttitor non nisi. Vivamus turpis augue, faucibus sed ex nec, cursus eleifend mauris. Vestibulum ut auctor lorem. Etiam ultricies pharetra sapien a sodales. Suspendisse condimentum felis sit amet velit venenatis, sed imperdiet turpis consectetur. Fusce non turpis egestas lorem vulputate aliquam. Curabitur vestibulum tristique eros, non euismod nisl iaculis et. In fermentum leo ac nibh rhoncus euismod. Vestibulum id venenatis erat.
 						</div>
 					</div>
@@ -186,6 +239,7 @@
 					<a class="control" href="#">Control #1 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
+							<img src="images/sample_image_1.jpg" class="align_left" alt="Sample image #1" />
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna diam, commodo at diam a, vulputate sagittis magna. Pellentesque a congue metus. Vestibulum varius dictum posuere.
 						</div>
 					</div>
@@ -194,6 +248,7 @@
 					<a class="control" href="#">Control #2 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
+							<img src="images/sample_image_2.jpg" class="align_right" alt="Sample image #2" />
 							Mauris ac metus id ante varius molestie porttitor non nisi. Vivamus turpis augue, faucibus sed ex nec, cursus eleifend mauris. Vestibulum ut auctor lorem. Etiam ultricies pharetra sapien a sodales. Suspendisse condimentum felis sit amet velit venenatis, sed imperdiet turpis consectetur. Fusce non turpis egestas lorem vulputate aliquam. Curabitur vestibulum tristique eros, non euismod nisl iaculis et. In fermentum leo ac nibh rhoncus euismod. Vestibulum id venenatis erat.
 						</div>
 					</div>
@@ -218,6 +273,7 @@
 					<a class="control" href="#">Control #5 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
+							<img src="images/sample_image_3.jpg" class="align_left" alt="Sample image #3" />
 							Mauris ac metus id ante varius molestie porttitor non nisi. Vivamus turpis augue, faucibus sed ex nec, cursus eleifend mauris. Vestibulum ut auctor lorem. Etiam ultricies pharetra sapien a sodales. Suspendisse condimentum felis sit amet velit venenatis, sed imperdiet turpis consectetur. Fusce non turpis egestas lorem vulputate aliquam. Curabitur vestibulum tristique eros, non euismod nisl iaculis et. In fermentum leo ac nibh rhoncus euismod. Vestibulum id venenatis erat.
 						</div>
 					</div>
@@ -251,6 +307,7 @@
 	$( function( )
 	{
 		$( '#my_accordion_4' ).accordion({
+			multiple:true,
 			animation:true,
 			speed:300
 		});
@@ -265,6 +322,7 @@
 					<a class="control" href="#">Control #1 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
+							<img src="images/sample_image_1.jpg" class="align_left" alt="Sample image #1" />
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna diam, commodo at diam a, vulputate sagittis magna. Pellentesque a congue metus. Vestibulum varius dictum posuere.
 						</div>
 					</div>
@@ -273,6 +331,7 @@
 					<a class="control" href="#">Control #2 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
+							<img src="images/sample_image_2.jpg" class="align_right" alt="Sample image #2" />
 							Mauris ac metus id ante varius molestie porttitor non nisi. Vivamus turpis augue, faucibus sed ex nec, cursus eleifend mauris. Vestibulum ut auctor lorem. Etiam ultricies pharetra sapien a sodales. Suspendisse condimentum felis sit amet velit venenatis, sed imperdiet turpis consectetur. Fusce non turpis egestas lorem vulputate aliquam. Curabitur vestibulum tristique eros, non euismod nisl iaculis et. In fermentum leo ac nibh rhoncus euismod. Vestibulum id venenatis erat.
 						</div>
 					</div>
@@ -297,6 +356,7 @@
 					<a class="control" href="#">Control #5 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
+							<img src="images/sample_image_3.jpg" class="align_left" alt="Sample image #3" />
 							Mauris ac metus id ante varius molestie porttitor non nisi. Vivamus turpis augue, faucibus sed ex nec, cursus eleifend mauris. Vestibulum ut auctor lorem. Etiam ultricies pharetra sapien a sodales. Suspendisse condimentum felis sit amet velit venenatis, sed imperdiet turpis consectetur. Fusce non turpis egestas lorem vulputate aliquam. Curabitur vestibulum tristique eros, non euismod nisl iaculis et. In fermentum leo ac nibh rhoncus euismod. Vestibulum id venenatis erat.
 						</div>
 					</div>
@@ -323,5 +383,8 @@
 		    </script>
 		</div>
 	</div>
+	<p>
+		<i>All public domain images are courtesy of <a href="https://commons.wikimedia.org/wiki/Main_Page" title="Wikimedia Commons">Wikimedia Commons</a>.</i>
+	</p>
 </body>
 </html>

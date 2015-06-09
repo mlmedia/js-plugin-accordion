@@ -44,6 +44,12 @@ pre {
     margin-bottom:2em;
 }
 
+div {
+    clear:both;
+    overflow:hidden;
+    display:block;
+}
+
 /* common */
 .container {
     margin:0 auto;
@@ -65,16 +71,18 @@ pre {
     padding:2em 2em 3em;
 }
 
-.float_left {
+.align_left {
     float:left;
     display:inline-block;
     clear:none;
+    margin-right:1em;
 }
 
-.float_right {
-    float:left;
+.align_right {
+    float:right;
     display:inline-block;
     clear:none;
+    margin-left:1em;
 }
 
 .accordion {
