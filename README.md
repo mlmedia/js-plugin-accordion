@@ -53,17 +53,25 @@ An example of the accordion markup is shown below:
 ###JavaScript / jQuery###
 Since this plugin utilizes jQuery, we must call it before we can initialize the plugin.  Typically, jQuery will go in the <HEAD> of your HTML document.  You can use a self-hosted copy of it or use one of several CDN hosted versions.  
 
-####CDN####
 ```html
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- CDN-hosted -->
 ```
 
-####Self-hosted####
+*- OR -*
 ```html
 <script src="js/jquery-1.11.3.min.js"></script>
-<!-- relative path to your JS folder -->
+<!-- path to your JS folder -->
+```
+Anywhere under the jQuery ref, add the ref to the plugin.  This can be added in the `<HEAD>` section or anywhere in the `<BODY>` of the document.
+
+```html
+<script src="js/accordion.js"></script>
+<!-- path to your JS folder -->
 ```
 
+###Initialize the plugin###
+Initialize the plugin with the selector of the parent element.
 
 ```javascript
 <script type="text/javascript">
@@ -73,8 +81,38 @@ Since this plugin utilizes jQuery, we must call it before we can initialize the 
 	/* doc ready */
 	$( function( )
 	{
-		$( '#my_accordion_1' ).accordion( );
+		$( '#my_parent_id' ).accordion( );
 	});
 })( jQuery );
 </script>
 ```
+As with most jQuery plugins, you can add the options as an argument to the accordion() function.  The following options are available:
+
+* _multiple_ (default: false) - in order to allow multiple accordion boxes to be open at once, set to `TRUE`.
+* _animated_ (default: false) - in order for the boxes to animate opening and closing, set this option to `TRUE`.
+* _speed_ (default: 200) - in order for the animation to move faster or slower, change this value accordingly.  Higher numbers are slower.  This option is ignored if the **animation** option is set to false.
+
+The example initialization call will create an accordion on the `#my_accordion` element with multiple box opening capability and with animation at 400 speed.
+
+```javascript
+<script type="text/javascript">
+/* define $ as jQuery just in case */
+( function( $ )
+{
+	/* doc ready */
+	$( function( )
+	{
+		$( '#my_accordion' ).accordion({
+			multiple: true,
+			animation: true,
+			speed: 400
+		});
+	});
+})( jQuery );
+</script>
+```
+
+###Style the plugin with CSS###
+The demo pages have some basic CSS to add some structure to the page, which can be seen here: http://dev.dockstreetmedia.com/accordion/css/main.css.  Some of the demos also have some styling for the accordions, which can be seen here: http://dev.dockstreetmedia.com/accordion/css/accordion.css.
+
+You can modify or add your own CSS to match your own preferences.
