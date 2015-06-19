@@ -25,13 +25,18 @@
 .styled_accordion .control .collapse {
 	position:absolute;
 	right:10px;
-	top:6px;
+	top:7px;
 }
 
 .styled_accordion .control .expand {
 	position:absolute;
 	right:10px;
-	top:8px;
+	top:7px;
+}
+
+.styled_accordion .control i {
+    font-size:1.2em;
+    color:#009900;
 }
 
 .styled_accordion .control:hover {

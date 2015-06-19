@@ -13,6 +13,8 @@ Usage of this accordion plugin entails the usual process:
 
 The HTML markup must have a containing parent element, which can use any ID or class for initialization. The parent element contains as many "group" elements as desired. Each "group" element contains a "control" element and a "box" element. The "control" element optionally contains an "expand" and "collapse" element to display an icon indicating whether the group is open or closed.
 
+Any element can be used in the "expand" and "collapse" spans, including "+" / "-" characters, special HTML characters such as `&#9660;` arrows, image graphics, or font icons, such as with <a href="http://fortawesome.github.io/Font-Awesome/icons/" title="Font Awesome icons" target="_blank">Font Awesome icons</a>.
+
 An example of the accordion markup is shown below:
 
 ```html
@@ -124,9 +126,22 @@ You can modify or add your own CSS to match your own preferences.
 
 ##Demos##
 
-The demos index can be viewed here: http://demo.dockstreetmedia.com/accordion/index.html.  View the source to see how each accordion was initialized and styled.  
+The demos index can be viewed here:
+
+* http://demo.dockstreetmedia.com/accordion/index.html.  
+
+View the source to see how each accordion was initialized and styled.  
 
 ##Learn / Adopt / Fork##
 The entirety of the plugin is included in this repository, including the demo section.  You can easily view all of the code in order to learn more about it.  I try to use clear commenting to explain the code.
+
+View the jQuery plugin code here:
+
+* http://demo.dockstreetmedia.com/accordion/js/accordion.js
+
+You can view the CSS files here:
+
+* http://demo.dockstreetmedia.com/accordion/css/main.css (basic page styles)
+* http://demo.dockstreetmedia.com/accordion/css/accordion.css (accordion styles)
 
 Also, feel free to adopt and adapt to make it your own.  If you like, fork it and send over a pull request.  Add or solve existing issues.  It is open-source, after all.
