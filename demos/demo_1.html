@@ -2,39 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery accordion plugin - DEMO #3</title>
-
+	<title>jQuery accordion plugin - DEMO #1</title>
 	<!-- css -->
-	<link type="text/css" media="all" href="css/main.css" rel="stylesheet" />
-	<link type="text/css" media="all" href="css/accordion.css" rel="stylesheet" />
+	<link type="text/css" media="all" href="../css/main.css" rel="stylesheet" />
 
 	<!-- js -->
-	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/accordion.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/accordion.js"></script>
 </head>
 <body>
 	<div class="container">
 
 		<div class="whitebox">
 			<div id="breadcrumbs">
-				&lt;&lt;&nbsp;<a href="index.html" title="Accordion DEMO index">DEMO index</a>
+				&lt;&lt;&nbsp;<a href="../index.html" title="Accordion DEMO index">DEMO index</a>
 			</div>
-			<h1>Accordion plugin - DEMO #3</h1>
+			<h1>Accordion plugin - DEMO #1</h1>
 			<p>
 				Below is a demo of the accordion plugin from the public GitHub project found here: <a href="https://github.com/mlmedia/accordion" title="Accordion plugin on GitHub" target="_blank">https://github.com/mlmedia/accordion</a>.
 			</p>
-			<p>
-				<i>All public domain images are courtesy of <a href="https://commons.wikimedia.org/wiki/Main_Page" title="Wikimedia Commons" target="_blank">Wikimedia Commons</a>.</i>
-			</p>
 			<hr />
-			<div id="my_accordion" class="accordion styled_accordion">
+			<div id="my_accordion" class="accordion">
                 <div class="group">
 					<a class="control" href="#">Control #1 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
-							<img src="images/sample_image_1.jpg" class="align_left" alt="Sample image #1" />
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna diam, commodo at diam a, vulputate sagittis magna. Pellentesque a congue metus. Vestibulum varius dictum posuere.
 						</div>
 					</div>
@@ -43,7 +37,6 @@
 					<a class="control" href="#">Control #2 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
-							<img src="images/sample_image_2.jpg" class="align_right" alt="Sample image #2" />
 							Mauris ac metus id ante varius molestie porttitor non nisi. Vivamus turpis augue, faucibus sed ex nec, cursus eleifend mauris. Vestibulum ut auctor lorem. Etiam ultricies pharetra sapien a sodales. Suspendisse condimentum felis sit amet velit venenatis, sed imperdiet turpis consectetur. Fusce non turpis egestas lorem vulputate aliquam. Curabitur vestibulum tristique eros, non euismod nisl iaculis et. In fermentum leo ac nibh rhoncus euismod. Vestibulum id venenatis erat.
 						</div>
 					</div>
@@ -68,29 +61,26 @@
 					<a class="control" href="#">Control #5 <span class="expand">&#9660;</span><span class="collapse">&#9650;</span></a>
 					<div class="box">
 						<div class="inner">
-							<img src="images/sample_image_3.jpg" class="align_left" alt="Sample image #3" />
 							Mauris ac metus id ante varius molestie porttitor non nisi. Vivamus turpis augue, faucibus sed ex nec, cursus eleifend mauris. Vestibulum ut auctor lorem. Etiam ultricies pharetra sapien a sodales. Suspendisse condimentum felis sit amet velit venenatis, sed imperdiet turpis consectetur. Fusce non turpis egestas lorem vulputate aliquam. Curabitur vestibulum tristique eros, non euismod nisl iaculis et. In fermentum leo ac nibh rhoncus euismod. Vestibulum id venenatis erat.
 						</div>
 					</div>
 				</div>
 			</div>
 			<script type="text/javascript">
-		    	/* define $ as jQuery just in case */
-		    	( function( $ )
-		        {
-		    		/* doc ready */
-		    		$( function( )
-		            {
-		    			/**
-						 * init the plugin - note all accordions can be serialized - (e.g.) $('#accordion_1, #accordion_2').accordion()
-						 * However, they are separated to display separate options
-						 */
-		    			$( '#my_accordion' ).accordion({
-							multiple:true
-						});
-		    		});
-		    	})( jQuery );
-		    </script>
+			/* define $ as jQuery just in case */
+			( function( $ )
+			{
+				/* doc ready */
+				$( function( )
+			    {
+					/**
+					 * init the plugin - note all accordions can be serialized - (e.g.) $('#accordion_1, #accordion_2').accordion()
+					 * However, they are separated to display separate options
+					 */
+					$( '#my_accordion' ).accordion( );
+				});
+			})( jQuery );
+			</script>
 		</div>
 	</div>
 </body>
