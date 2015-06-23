@@ -11,9 +11,9 @@ Usage of this accordion plugin entails the usual process:
 
 ###HTML###
 
-The HTML markup must have a containing parent element, which can use any ID or class for initialization. The parent element contains as many "group" elements as desired. Each "group" element contains a "control" element and a "box" element. The "control" element optionally contains an "expand" and "collapse" element to display an icon indicating whether the group is open or closed.
+The HTML markup must have a containing parent element, which can use any ID or class for initialization. The parent element contains as many elements with the "group" class as desired. Each "group" element contains an element with a "control" class and an element with the "box" class. The "control" element may also optionally contain an element with an "expand" class and one with a "collapse" class to contain an icon indicating whether the group is open or closed.
 
-Any element can be used in the "expand" and "collapse" spans, including "+" / "-" characters, special HTML characters such as `&#9660;` arrows, image graphics, or font icons, such as with <a href="http://fortawesome.github.io/Font-Awesome/icons/" title="Font Awesome icons" target="_blank">Font Awesome icons</a>.
+Any element can be used in the "expand" and "collapse" elements, including "+" / "-" characters, special HTML characters such as `&#9660;` arrows, image graphics, or font icons, such as with <a href="http://fortawesome.github.io/Font-Awesome/icons/" title="Font Awesome icons" target="_blank">Font Awesome icons</a>.
 
 An example of the accordion markup is shown below:
 
@@ -134,14 +134,5 @@ View the source to see how each accordion was initialized and styled.
 
 ##Learn / Adopt / Fork##
 The entirety of the plugin is included in this repository, including the demo section.  You can easily view all of the code in order to learn more about it.  I try to use clear commenting to explain the code.
-
-View the jQuery plugin code here:
-
-* http://demo.dockstreetmedia.com/accordion/js/accordion.js
-
-You can view the CSS files here:
-
-* http://demo.dockstreetmedia.com/accordion/css/main.css (basic page styles)
-* http://demo.dockstreetmedia.com/accordion/css/accordion.css (accordion styles)
 
 Also, feel free to adopt and adapt to make it your own.  If you like, fork it and send over a pull request.  Add or solve existing issues.  It is open-source, after all.
