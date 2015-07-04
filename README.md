@@ -1,5 +1,7 @@
 #Accordion plugin#
 
+This jQuery plugin creates an accordion that toggles visibility for a group of accordion boxes using control elements.  Accordions are useful for saving vertical space for things like Frequently-Asked-Questions (FAQ) pages or glossaries.
+
 ##Usage / Installation##
 
 Usage of this accordion plugin entails the usual process:
@@ -123,6 +125,8 @@ The example initialization call will create an accordion on the `#my_accordion` 
 The demo pages have some basic CSS to add some structure to the page, which can be seen here: http://demo.dockstreetmedia.com/accordion/css/main.css.  Some of the demos also have some styling for the accordions, which can be seen here: http://demo.dockstreetmedia.com/accordion/css/accordion.css.
 
 You can modify or add your own CSS to match your own preferences.
+
+<strong>NOTE</strong>: the CSS should work for all modern browsers (Chrome, Firefox, Safari, etc.) and Internet Explorer 8 and later.  IE 7 and older, things fall apart.  However, if you are still using IE 7, then I'm sorry, but that's your fault.
 
 ##Demos##
 
