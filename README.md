@@ -15,7 +15,7 @@ Usage of this accordion plugin entails the usual process:
 
 The HTML markup must have a containing parent element, which can use any ID or class for initialization. The parent element contains as many elements with the "group" class as desired. Each "group" element contains an element with a "control" class and an element with the "box" class. The "control" element may also optionally contain an element with an "expand" class and one with a "collapse" class to contain an icon indicating whether the group is open or closed.
 
-Any element can be used in the "expand" and "collapse" elements, including "+" / "-" characters, special HTML characters such as `&#9660;` arrows, image graphics, or font icons, such as with <a href="http://fortawesome.github.io/Font-Awesome/icons/" title="Font Awesome icons" target="_blank">Font Awesome icons</a>.
+Any element can be used in the "expand" and "collapse" elements, including "+" / "-" characters, special HTML characters such as `&#9660;` arrows, image graphics, or font icons, such as with <a href="http://fontawesome.github.io/Font-Awesome/icons/" title="Font Awesome icons" target="_blank">Font Awesome icons</a>.
 
 An example of the accordion markup is shown below:
 
