@@ -1,5 +1,7 @@
 #Accordion plugin#
 
+This jQuery plugin creates an accordion that toggles visibility for a group of accordion boxes using control elements.  Accordions are useful for saving vertical space for things like Frequently-Asked-Questions (FAQ) pages or glossaries.
+
 ##Usage / Installation##
 
 Usage of this accordion plugin entails the usual process:
@@ -13,7 +15,7 @@ Usage of this accordion plugin entails the usual process:
 
 The HTML markup must have a containing parent element, which can use any ID or class for initialization. The parent element contains as many elements with the "group" class as desired. Each "group" element contains an element with a "control" class and an element with the "box" class. The "control" element may also optionally contain an element with an "expand" class and one with a "collapse" class to contain an icon indicating whether the group is open or closed.
 
-Any element can be used in the "expand" and "collapse" elements, including "+" / "-" characters, special HTML characters such as `&#9660;` arrows, image graphics, or font icons, such as with <a href="http://fortawesome.github.io/Font-Awesome/icons/" title="Font Awesome icons" target="_blank">Font Awesome icons</a>.
+Any element can be used in the "expand" and "collapse" elements, including "+" / "-" characters, special HTML characters such as `&#9660;` arrows, image graphics, or font icons, such as with <a href="http://fontawesome.github.io/Font-Awesome/icons/" title="Font Awesome icons" target="_blank">Font Awesome icons</a>.
 
 An example of the accordion markup is shown below:
 
@@ -123,6 +125,8 @@ The example initialization call will create an accordion on the `#my_accordion` 
 The demo pages have some basic CSS to add some structure to the page, which can be seen here: http://demo.dockstreetmedia.com/accordion/css/main.css.  Some of the demos also have some styling for the accordions, which can be seen here: http://demo.dockstreetmedia.com/accordion/css/accordion.css.
 
 You can modify or add your own CSS to match your own preferences.
+
+<strong>NOTE</strong>: the CSS should work for all modern browsers (Chrome, Firefox, Safari, etc.) and Internet Explorer 8 and later.  IE 7 and older, things fall apart.  However, if you are still using IE 7, then I'm sorry, but that's your fault.
 
 ##Demos##
 
