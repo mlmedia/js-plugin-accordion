@@ -1,57 +1,50 @@
 .styled_accordion {
-    border-bottom:1px solid #9a9a9a;
+	border-bottom: 1px solid #9a9a9a;
 }
-
 .styled_accordion .control {
-	position:relative;
-	text-decoration:none;
-	display:block;
-	font-weight:bold;
-	font-size:16px;
-	line-height:40px;
-	padding:0.4em 1em;
-	color:#333333;
-	background-color:#f5f5f5;
-	background-image:-moz-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-	background-image:-webkit-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image:-o-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image:linear-gradient(to bottom, #ffffff, #e6e6e6);
-	background-repeat:repeat-x;
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
-	filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	position: relative;
+	text-decoration: none;
+	display: block;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 40px;
+	padding: 0.4em 1em;
+	color: #333333;
+	background-color: #f5f5f5;
+	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-repeat: repeat-x;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+	filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
 }
-
 .styled_accordion .control .collapse {
-	position:absolute;
-	right:10px;
-	top:7px;
+	position: absolute;
+	right: 10px;
+	top: 7px;
 }
-
 .styled_accordion .control .expand {
-	position:absolute;
-	right:10px;
-	top:7px;
+	position: absolute;
+	right: 10px;
+	top: 7px;
 }
-
 .styled_accordion .control i {
-    font-size:1.2em;
-    color:#009900;
+	font-size: 1.2em;
+	color: #009900;
 }
-
 .styled_accordion .control:hover {
-	text-decoration:none;
+	text-decoration: none;
 }
-
 .styled_accordion .group {
-	border:1px solid #9a9a9a;
-	border-bottom:none;
+	border: 1px solid #9a9a9a;
+	border-bottom: none;
 }
-
 .styled_accordion .group .box {
-	border-top:1px solid #9a9a9a;
-	padding:0;
-	margin:0;
+	border-top: 1px solid #9a9a9a;
+	padding: 0;
+	margin: 0;
 }
 
 /**
@@ -59,11 +52,11 @@
  * because padding / margin on the animated ".box" element causes
  * animation choppiness in some browsers
  */
-.styled_accordion .group .box .inner {
-	padding:1em;
-}
 
+.styled_accordion .group .box .inner {
+	padding: 1em;
+}
 .styled_accordion .group.open .control {
-	background-color:#e4e4e4;
-	background-image:none;
+	background-color: #e4e4e4;
+	background-image: none;
 }

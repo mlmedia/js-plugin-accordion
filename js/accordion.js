@@ -2,11 +2,9 @@
  * jQuery plugin for an accordion
  */
 /* define $ as jQuery just in case */
-(function($)
-{
+(function($) {
 	/* toggle / accordion events - my custom plugin */
-	$.fn.accordion = function(options)
-	{
+	$.fn.accordion = function(options) {
 		/* set the default options */
 		var settings = $.extend({
 			animation: false,
@@ -27,18 +25,13 @@
 		boxes.hide();
 
 		/* on page load - show the accordion */
-		$( window ).load( function()
-		{
+		$(window).load(function() {
 			/* hide the collapse icon, unless the group is marked open, then hide the expander icon */
-			$.each( groups, function(i, group)
-			{
-				if ($(groups[i]).hasClass('open'))
-				{
+			$.each(groups, function(i, group) {
+				if ($(groups[i]).hasClass('open')) {
 					$(groups[i]).find('.expand').hide();
 					$(groups[i]).find('.box').show();
-				}
-				else
-				{
+				} else {
 					$(groups[i]).find('.collapse').hide();
 					$(groups[i]).find('.box').hide();
 				}
@@ -49,15 +42,12 @@
 		});
 
 		/* accordion control click action */
-		accordion.on('click', '.control', function(e)
-		{
-			var parent_el = $( this ).closest('.group');
+		accordion.on('click', '.control', function(e) {
+			var parent_el = $(this).closest('.group');
 			var target = parent_el.find('.box');
-			if ( parent_el.hasClass('open') )
-			{
+			if (parent_el.hasClass('open')) {
 				/* hide all the collapse icons if multiple settings is set to false (only one box open at a time) */
-				if (settings.multiple == false)
-				{
+				if (settings.multiple == false) {
 					groups.find('.collapse').hide();
 				}
 
@@ -67,32 +57,23 @@
 				parent_el.find('.expand').show(); /* show the expand icon */
 
 				/* if animation is set to true, animate; otherwise show / hide instantly instead */
-				if (settings.animation == true)
-				{
+				if (settings.animation == true) {
 					target.slideUp(settings.speed);
-				}
-				else
-				{
+				} else {
 					target.hide();
 				}
-			}
-			else /* otherwise, expand it */
-			{
+			} else /* otherwise, expand it */ {
 				/* hide all the collapse icons if multiple settings is set to false (only one box open at a time) */
-				if (settings.multiple == false)
-				{
+				if (settings.multiple == false) {
 					/* close all boxes and hide collapse icons / show all expand icons - before expanding this control / box */
 					groups.removeClass('open');
 					groups.find('.collapse').hide();
 					groups.find('.expand').show();
 
 					/* if animation is set to true, animate; otherwise show / hide instantly instead */
-					if (settings.animation == true)
-					{
+					if (settings.animation == true) {
 						boxes.slideUp(settings.speed);
-					}
-					else
-					{
+					} else {
 						boxes.hide();
 					}
 				}
@@ -103,12 +84,9 @@
 				parent_el.find('.collapse').show(); /* show the collapse icon */
 
 				/* if animation is set to true, animate; otherwise show / hide instantly instead */
-				if (settings.animation == true)
-				{
+				if (settings.animation == true) {
 					target.slideDown(settings.speed);
-				}
-				else
-				{
+				} else {
 					target.show();
 				}
 			}
