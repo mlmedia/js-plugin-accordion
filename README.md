@@ -1,8 +1,8 @@
-#Accordion plugin#
+# Accordion plugin
 
 This jQuery plugin creates an accordion that toggles visibility for a group of accordion boxes using control elements.  Accordions are useful for saving vertical space for things like Frequently-Asked-Questions (FAQ) pages or glossaries.
 
-##Usage / Installation##
+## Usage / Installation
 
 Usage of this accordion plugin entails the usual process:
 
@@ -11,7 +11,7 @@ Usage of this accordion plugin entails the usual process:
 3. initialize the plugin with any available options
 4. style the markup with CSS as desired.
 
-###HTML###
+### HTML
 
 The HTML markup must have a containing parent element, which can use any ID or class for initialization. The parent element contains as many elements with the "group" class as desired. Each "group" element contains an element with a "control" class and an element with the "box" class. The "control" element may also optionally contain an element with an "expand" class and one with a "collapse" class to contain an icon indicating whether the group is open or closed.
 
@@ -59,7 +59,7 @@ An example of the accordion markup is shown below:
 </div>
 ```
 
-###JavaScript / jQuery###
+### JavaScript / jQuery
 Since this plugin utilizes jQuery, we must call it before we can initialize the plugin.  Typically, jQuery will go in the <HEAD> of your HTML document.  You can use a self-hosted copy of it or use one of several CDN hosted versions.  
 
 ```html
@@ -79,7 +79,7 @@ Anywhere under the jQuery ref, add the ref to the plugin.  This can be added in 
 <!-- path to your JS folder -->
 ```
 
-###Initialize the plugin###
+### Initialize the plugin
 Initialize the plugin with the selector of the parent element.
 
 ```javascript
@@ -121,14 +121,14 @@ The example initialization call will create an accordion on the `#my_accordion` 
 </script>
 ```
 
-###Style the plugin with CSS###
+### Style the plugin with CSS
 The demo pages have some basic CSS to add some structure to the page, which can be seen here: http://demo.dockstreetmedia.com/accordion/css/main.css.  Some of the demos also have some styling for the accordions, which can be seen here: http://demo.dockstreetmedia.com/accordion/css/accordion.css.
 
 You can modify or add your own CSS to match your own preferences.
 
 <strong>NOTE</strong>: the CSS should work for all modern browsers (Chrome, Firefox, Safari, etc.) and Internet Explorer 8 and later.  IE 7 and older, things fall apart.  However, if you are still using IE 7, then I'm sorry, but that's your fault.
 
-##Demos##
+## Demos
 
 The demos index can be viewed here:
 
@@ -136,7 +136,7 @@ The demos index can be viewed here:
 
 View the source to see how each accordion was initialized and styled.  
 
-##Learn / Adopt / Fork##
+## Learn / Adopt / Fork
 The entirety of the plugin is included in this repository, including the demo section.  You can easily view all of the code in order to learn more about it.  I try to use clear commenting to explain the code.
 
 Also, feel free to adopt and adapt to make it your own.  If you like, fork it and send over a pull request.  Add or solve existing issues.  It is open-source, after all.
