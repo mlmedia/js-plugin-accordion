@@ -1,6 +1,6 @@
 # Accordion plugin
 
-This jQuery plugin creates an accordion that toggles visibility for a group of accordion boxes using control elements.  Accordions are useful for saving vertical space for things like Frequently-Asked-Questions (FAQ) pages or glossaries.
+This jQuery plugin creates an accordion that toggles visibility for a group of accordion boxes using control elements. Accordions are useful for saving vertical space for things like Frequently-Asked-Questions (FAQ) pages or glossaries.
 
 ## Usage / Installation
 
