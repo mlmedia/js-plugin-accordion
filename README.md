@@ -20,7 +20,7 @@ Any element can be used in the "expand" and "collapse" elements, including "+" /
 An example of the accordion markup is shown below:
 
 ```html
-<div id="my_accordion_1" class="accordion">
+<div id="my-accordion_1" class="accordion">
 	<div class="group">
 		<a class="control" href="#">
 			Control #1
@@ -101,7 +101,7 @@ As with most jQuery plugins, you can add the options as an argument to the accor
 * _animated_ (default: false) - in order for the boxes to animate opening and closing, set this option to `TRUE`.
 * _speed_ (default: 200) - in order for the animation to move faster or slower, change this value accordingly.  Higher numbers are slower.  This option is ignored if the **animation** option is set to false.
 
-The example initialization call will create an accordion on the `#my_accordion` element with multiple box opening capability and with animation at 400 speed.
+The example initialization call will create an accordion on the `#my-accordion` element with multiple box opening capability and with animation at 400 speed.
 
 ```javascript
 <script type="text/javascript">
@@ -111,7 +111,7 @@ The example initialization call will create an accordion on the `#my_accordion` 
 	/* doc ready */
 	$( function( )
 	{
-		$( '#my_accordion' ).accordion({
+		$( '#my-accordion' ).accordion({
 			multiple: true,
 			animation: true,
 			speed: 400

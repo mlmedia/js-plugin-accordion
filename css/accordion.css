@@ -1,7 +1,8 @@
-.styled_accordion {
+.styled-accordion {
 	border-bottom: 1px solid #9a9a9a;
 }
-.styled_accordion .control {
+
+.styled-accordion .control {
 	position: relative;
 	text-decoration: none;
 	display: block;
@@ -20,28 +21,34 @@
 	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
 	filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
 }
-.styled_accordion .control .collapse {
+
+.styled-accordion .control .collapse {
 	position: absolute;
 	right: 10px;
 	top: 7px;
 }
-.styled_accordion .control .expand {
+
+.styled-accordion .control .expand {
 	position: absolute;
 	right: 10px;
 	top: 7px;
 }
-.styled_accordion .control i {
+
+.styled-accordion .control i {
 	font-size: 1.2em;
 	color: #009900;
 }
-.styled_accordion .control:hover {
+
+.styled-accordion .control:hover {
 	text-decoration: none;
 }
-.styled_accordion .group {
+
+.styled-accordion .group {
 	border: 1px solid #9a9a9a;
 	border-bottom: none;
 }
-.styled_accordion .group .box {
+
+.styled-accordion .group .box {
 	border-top: 1px solid #9a9a9a;
 	padding: 0;
 	margin: 0;
@@ -53,10 +60,11 @@
  * animation choppiness in some browsers
  */
 
-.styled_accordion .group .box .inner {
+.styled-accordion .group .box .inner {
 	padding: 1em;
 }
-.styled_accordion .group.open .control {
+
+.styled-accordion .group.open .control {
 	background-color: #e4e4e4;
 	background-image: none;
 }
