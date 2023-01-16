@@ -98,6 +98,13 @@ div {
 	margin-bottom: 4em;
 }
 
+.back-link {
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+	display: block;
+	text-decoration: none;
+}
+
 /* mobile */
 
 @media (max-width:979px) {

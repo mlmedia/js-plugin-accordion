@@ -122,7 +122,7 @@ The example initialization call will create an accordion on the `#my-accordion` 
 ```
 
 ### Style the plugin with CSS
-The demo pages have some basic CSS to add some structure to the page, which can be seen here: http://demo.dockstreetmedia.com/accordion/css/main.css.  Some of the demos also have some styling for the accordions, which can be seen here: http://demo.dockstreetmedia.com/accordion/css/accordion.css.
+The demo pages have some basic CSS to add some structure to the page, which can be seen here: http://www.dockstreetmedia.com/demo/accordion/css/main.css.  Some of the demos also have some styling for the accordions, which can be seen here: http://www.dockstreetmedia.com/demo/accordion/css/accordion.css.
 
 You can modify or add your own CSS to match your own preferences.
 
@@ -132,7 +132,7 @@ You can modify or add your own CSS to match your own preferences.
 
 The demos index can be viewed here:
 
-* http://demo.dockstreetmedia.com/accordion/index.html.  
+* http://www.dockstreetmedia.com/demo/accordion/index.html.  
 
 View the source to see how each accordion was initialized and styled.  
 
